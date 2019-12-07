@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SymBnB - {% block title %}Welcome!{% endblock %}</title>
+         <link rel="stylesheet" href="/css/bootstrap.min.css">
+         <link rel="stylesheet" href="/css/app.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    
+    <body>
+        {% include "partiels/header.html.twig" %}
+   
+        {% block body %}{% endblock %}
+
+        {% include "partiels/footer.html.twig" %}
+       
+        <script src="/js/jquery.js"></script>
+        <script src="/js/popper.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+         {% block javascripts %}{% endblock %}
+    </body>
+</html>

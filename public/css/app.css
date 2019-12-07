@@ -1,0 +1,30 @@
+div.add-tittle{
+	background-size: cover;
+	background-position: center center;
+	padding: 2px;
+}
+div.add-tittle h1, div.add-tittle p
+{
+	color: white;
+	text-shadow: 
+
+}
+div.container{
+	margin-top: 20px;
+}
+.avatar {
+	max-width: 128px;
+	max-height: 128px;
+	border-radius: 50%;
+}
+.avatar-medium{
+	max-width: 64px;
+	max-height: 64px;
+}
+.avatar-mini{
+	max-width: 28px;
+	max-height: 28px;
+}
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover{
+	color: red !important;
+}

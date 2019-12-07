@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ ad.title }}
+{% endblock %}
+{% block body %}
+	<div class="add-tittle" style="background-image : url({{ad.coverImage}})">
+		<div class="container">
+			<h1>{{ad.title}}</h1>
+			<p>{{ad.introduction}}</p>
+			<p><strong>{{ad.rooms}} Chambres </strong>pour <strong>{{ad.price}}</strong> FCFA par nuits</p>
+			<a href="{{ path('book_create',{'slug': ad.slug}) }}" class="btn btn-success">Reservez !!!</a>
+			{% if app.user and app.user == ad.getAuthor() %}
+			<a href="{{ path('edite_article',{'slug' :ad.slug}) }}" class="btn btn-primary">Modifier</a>
+			<a href="{{ path('supprimer_article',{'slug' :ad.slug}) }}" class="btn btn-danger"
+			onClick="return confirm(`vous voulez supprimer {{ad.title}}`)">Supprimer</a>
+			{% endif %}
+		</div>
+		
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 mb-3">
+				<h1>{{ad.content|raw}}</h1>
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					{% for images in ad.images %}
+						<li data-target="#carouselExampleIndicators" data-slide-to="{{loop.index0}}" class="active"></li>
+					{% endfor %}
+					</ol>
+					<div class="carousel-inner">
+					{% for images in ad.images %}
+						<div class="carousel-item {% if loop.first %} active  {% endif %} ">
+							<img class="d-block w-100" src="{{images.url}}" alt="First slide">
+						</div>
+					{% endfor %}
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="col">
+			{% set a = ad.author %}
+				<div class="row mb-3 align-items-center">
+					<div class="col-3">
+						<img class = "avatar avatar-medium" src="{{a.picture}}" alt="photo de {{a.fullname}}">
+					</div>
+					<div class="col">
+						<h1>{{a.fullname()}}</h1>
+						<span class="badge badge-primary">{{a.ads|length }} Annonces !!!</span>
+					</div>
+				</div>
+				<p>{{a.description | raw}}</p>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
