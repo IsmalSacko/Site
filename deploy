@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -av ./ u97170284@217.160.196.7:~/Symfony --include=public/build --include=public/.htaccess --include=vendor --exclude-from=.gitignore --exclude=".*"
