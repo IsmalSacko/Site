@@ -1,20 +1,28 @@
 {% extends "base.html.twig" %}
-{% block title %}Modification Maison{% endblock %}
+{% block title %}Modification Maison
+{% endblock %}
 
 {% form_theme form 'ad/_collection.html.twig' %}
-{% block body %} 
-<div class="container">
-    <h1>Modifier l'annonce {{ad.title}} !!!</h1>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-primary">Effectuez la modification !!</button>
-    {{ form_end(form) }}
-</div>
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">&nbsp;</div>
+			<div class="col-md-6">
+				<div class="bg-light py-3 px-3">
+					<h1>Modifier l'annonce {{ad.title}}!!!</h1>
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					<button type="submit" class="btn btn-primary">Effectuez la modification !!</button>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block javascripts %}
- 
- <script src="/js/ad.js"></script>
- 
-    
- {% endblock %}
+
+	<script src="/js/ad.js"></script>
+
+
+{% endblock %}

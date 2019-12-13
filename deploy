@@ -1,3 +1,4 @@
 #!/bin/sh
 # npm run build
 rsync -av ./ u97170284@217.160.196.7:~/Symfony --include=public/build --include=public/.htaccess --exclude-from=.gitignore --exclude=".*" --exclude=/vendor
+ssh u97170284@217.160.196.7 'cd ~/Symfony && php7.3-cli bin/console cache:clear'

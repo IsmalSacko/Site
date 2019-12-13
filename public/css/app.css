@@ -3,12 +3,12 @@ div.add-tittle{
 	background-position: center center;
 	padding: 2px;
 }
-div.add-tittle h1, div.add-tittle p
-{
+div.add-tittle h1, div.add-tittle p{
 	color: white;
-	text-shadow: 
+	text-shadow: 2%;
 
 }
+
 div.container{
 	margin-top: 20px;
 }

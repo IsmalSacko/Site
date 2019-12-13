@@ -1,20 +1,26 @@
 {% extends "base.html.twig" %}
-{% block title %}NOUVELLE Maison{% endblock %}
+{% block title %}NOUVELLE Maison
+{% endblock %}
 {% form_theme form 'ad/_collection.html.twig' %}
-{% block body %} 
-<div class="container">
-    <h1>Créer une nouvelle annoncees !!!</h1>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-primary">Creez la nouvelle annonces !!</button>
-    {{ form_end(form) }}
-</div>
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">&nbsp;</div>
+			<div class="col-md-6">
+				<div class="bg-light py-3 px-3">
+					<h1>Créer une nouvelle annoncees !!!</h1>
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					<button type="submit" class="btn btn-primary">Creez la nouvelle annonces !!</button>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block javascripts %}
- 
- <script src="/js/ad.js">
-     
- </script>
 
- {% endblock %}
+	<script src="/js/ad.js"></script>
+
+{% endblock %}

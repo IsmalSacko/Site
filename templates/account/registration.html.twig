@@ -1,14 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription
+{% endblock %}
 
 {% block body %}
-    <div class="container">
-    <h2>Connectez vous sur notre site !!!!</h2>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button type="submit" class="btn btn-success">Insrivez vous</button>
-        {{ form_end(form) }}
-    </div>
-        
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">&nbsp;</div>
+			<div class="col-md-6">
+				<div class="bg-light py-3 px-3">
+					<h2 style="color:green">Insrivez-vous ici !</h2>
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					<button type="submit" class="btn btn-success">Insrivez vous</button>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

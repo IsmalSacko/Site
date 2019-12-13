@@ -2,11 +2,21 @@
 {% block title %}Modifier mon profile{% endblock %}
 {% block body %}
     <div class="container">
-       
-            {{ form_start(form) }}
+
+    <div class="row">
+			<div class="col-md-3">&nbsp;</div>
+			<div class="col-md-6">
+				<div class="bg-light py-3 px-3">
+					<h1 style="color:green">Modifier votre profile !</h1>
+					{{ form_start(form) }}
             {{ form_widget(form) }}
             <button type="submit" class="btn btn-primary">Enregistres les modification</button>
             {{ form_end(form)}}
+				</div>
+			</div>
+		</div>
+       
+            
        
     </div>
 {% endblock %}

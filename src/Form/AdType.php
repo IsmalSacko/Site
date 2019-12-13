@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Ad;
-
 use App\Form\ImageType;
 use App\Form \ApplicationType;
 use Symfony\Component\Form\AbstractType;
