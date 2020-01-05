@@ -60,7 +60,7 @@ class AdController extends AbstractController
     }
     /**
      *@Route("/ad/{slug}/edit", name="edite_article")
-     *@Security("is_granted('ROLE_USER') and user === ad.getAuthor()", message ="vous n'etez pas le proprietaire")
+     *@Security("is_granted('ROLE_USER') and user === ad.getAuthor()", message ="vous n'êtes pas le proprietaire")
      * @return Response
      */
     public function edit(Ad $ad, ObjectManager $manager, Request $request){

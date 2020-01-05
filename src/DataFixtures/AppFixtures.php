@@ -27,11 +27,11 @@ class AppFixtures extends Fixture
         $manager->persist($adminrole);
 
         $useradmin = new User();
-        $useradmin->setFirstName('TELLY')
-                  ->setLastName('issa')
-                  ->setEmail('tellyissa@gmail.com')
-                  ->setPicture('https://avatars.io/twitter/LiiorC')
+        $useradmin->setFirstName('SACKO')
+                  ->setLastName('Ismaela')
+                  ->setEmail('ismalsacko@yahoo.fr')
                   ->setHash($this->encoder->encodePassword($useradmin,'password'))
+                  ->setPicture('https://twitter.com/ismaelsacko1')
                   ->setIntroduction($faker->sentence())
                   ->setDescription('<p>'. join('<p></p>',$faker->paragraphs(2)) .'</p>')
                   ->addUserRole($adminrole);
